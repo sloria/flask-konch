@@ -7,15 +7,23 @@ import konch
 
 
 DEFAULTS = dict(
-    KONCH_CONTEXT={},
     KONCH_FLASK_IMPORTS=True,
-    KONCH_BANNER=None,
+    KONCH_CONTEXT={},
     KONCH_SHELL='auto',
-    KONCH_IPY_AUTORELOAD=False,
-    KONCH_CONTEXT_FORMAT=None,
-    # TODO
+    KONCH_BANNER=None,
     KONCH_PROMPT=None,
+    KONCH_CONTEXT_FORMAT=None,
+    KONCH_IPY_AUTORELOAD=False,
+    KONCH_IPY_EXTENSIONS=None,
+    KONCH_PTPY_VI_MODE=False,
 )
+
+
+def get_flask_imports():
+    ret = {}
+    for name in [e for e in dir(flask) if not e.startswith('_')]:
+        ret[name] = getattr(flask, name)
+    return ret
 
 @click.command()
 @with_appcontext
@@ -30,8 +38,7 @@ def cli():
         'app': app,
     }
     if options['KONCH_FLASK_IMPORTS']:
-        for name in [e for e in dir(flask) if not e.startswith('_')]:
-            base_context[name] = getattr(flask, name)
+        base_context.update(get_flask_imports())
 
     context = dict(base_context)
     context.update(options['KONCH_CONTEXT'])
@@ -49,6 +56,8 @@ def cli():
         context=context,
         shell=options['KONCH_SHELL'],
         banner=options['KONCH_BANNER'],
+        prompt=options['KONCH_PROMPT'],
+        ptpy_vi_mode=options['KONCH_PTPY_VI_MODE'],
         context_format=context_format,
         ipy_autoreload=options['KONCH_IPY_AUTORELOAD'],
     )
