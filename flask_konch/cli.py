@@ -52,7 +52,7 @@ def cli():
         if options['KONCH_CONTEXT']:
             variables = ', '.join(sorted(options['KONCH_CONTEXT'].keys()))
             ret += '\n{ADDITIONAL}\n{variables}'.format(
-                ADDITIONAL=click.style('Addtional variables:', bold=True),
+                ADDITIONAL=click.style('Additional variables:', bold=True),
                 variables=variables
             )
         return ret

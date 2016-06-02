@@ -24,7 +24,7 @@ Benefits of ``flask konch`` over ``flask shell``
 Flask-Konch uses `konch <https://github.com/sloria/konch>`_, a shell configuration utility, under the hood.
 
 Get it now
-----------
+==========
 ::
 
     pip install flask-konch
