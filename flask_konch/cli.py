@@ -45,10 +45,16 @@ def cli():
 
     def context_formatter(ctx):
         formatted_base = ', '.join(sorted(base_context.keys()))
-        ret = '\nFlask:\n{base_context}\n'.format(base_context=formatted_base)
+        ret = '\n{FLASK}\n{base_context}\n'.format(
+            FLASK=click.style('Flask:', bold=True),
+            base_context=formatted_base
+        )
         if options['KONCH_CONTEXT']:
-            additional = ', '.join(sorted(options['KONCH_CONTEXT'].keys()))
-            ret += '\nAdditional variables:\n{additional}'.format(additional=additional)
+            variables = ', '.join(sorted(options['KONCH_CONTEXT'].keys()))
+            ret += '\n{ADDITIONAL}\n{variables}'.format(
+                ADDITIONAL=click.style('Addtional variables:', bold=True),
+                variables=variables
+            )
         return ret
 
     context_format = options['KONCH_CONTEXT_FORMAT'] or context_formatter
