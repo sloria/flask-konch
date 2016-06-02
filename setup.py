@@ -48,7 +48,6 @@ setup(
     zip_safe=False,
     keywords='flask-konch',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
