@@ -1,0 +1,12 @@
+language: python
+sudo: false
+python:
+  - "3.5"
+  - "3.4"
+  - "2.7"
+  - "pypy"
+install:
+  - travis_retry pip install -U -r dev-requirements.txt
+  - travis_retry pip install -U .
+
+script:  inv test
