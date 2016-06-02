@@ -2,7 +2,7 @@
 Flask-Konch
 ***********
 
-.. |pypi-package| |build-status|
+|pypi-package| |build-status|
 
 .. image:: https://dl.dropboxusercontent.com/u/1693233/github/flask-konch.png
     :alt: Flask-Konch
@@ -82,6 +82,6 @@ MIT licensed. See the bundled `LICENSE <https://github.com/sloria/flask-konch/bl
 .. |pypi-package| image:: https://badge.fury.io/py/flask-konch.svg
     :target: http://badge.fury.io/py/flask-konch
     :alt: Latest version
-.. .. |build-status| image:: https://travis-ci.org/sloria/flask-konch.svg?branch=pypi
-..     :target: https://travis-ci.org/sloria/flask-konch
-..     :alt: Travis-CI
+.. |build-status| image:: https://travis-ci.org/sloria/flask-konch.svg?branch=pypi
+    :target: https://travis-ci.org/sloria/flask-konch
+    :alt: Travis-CI
