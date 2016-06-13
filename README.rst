@@ -59,7 +59,8 @@ Configuration options
 - ``KONCH_CONTEXT``: Dictionary of additional variables to include in the shell context.
 - ``KONCH_SHELL``: May be ``'ipy'``, ``'bpy'``, ``'ptpy'``, ``'ptipy'``, ``'py'``, or ``'auto'`` (default).
 - ``KONCH_BANNER``: Custom banner.
-- ``KONCH_PROMPT``: Custom prompt.
+- ``KONCH_PROMPT``: Custom input prompt.
+- ``KONCH_OUTPUT``: Custom output prompt.
 - ``KONCH_CONTEXT_FORMAT``: Format to display shell context. May be ``'full'``, ``'short'``, or a function that receives the context dictionary as input and returns a string.
 - ``KONCH_IPY_AUTORELOAD``: Whether to load and enable the IPython autoreload extension (must be using ``ipython`` shell).
 - ``KONCH_IPY_EXTENSIONS``: List of IPython extension names to load (must be using ``ipython`` shell).

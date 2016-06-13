@@ -23,10 +23,10 @@ def runner():
 
 @pytest.fixture
 def run_command(runner, make_app):
-    def run(args=None, config=None):
+    def run(args=None, config=None, **kwargs):
         app = make_app(config=config or {})
         obj = ScriptInfo(create_app=lambda info: app)
-        return runner.invoke(cli, args or [], obj=obj)
+        return runner.invoke(cli, args or [], obj=obj, **kwargs)
     return run
 
 ##### Tests #####
