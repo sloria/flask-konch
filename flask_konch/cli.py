@@ -8,6 +8,7 @@ import konch
 
 DEFAULTS = dict(
     KONCH_FLASK_IMPORTS=True,
+    KONCH_FLASK_SHELL_CONTEXT=True,
     KONCH_CONTEXT={},
     KONCH_SHELL='auto',
     KONCH_BANNER=None,
@@ -42,6 +43,11 @@ def cli():
         base_context.update(get_flask_imports())
 
     context = dict(base_context)
+
+    if options['KONCH_FLASK_SHELL_CONTEXT']:
+        flask_context = app.make_shell_context()
+        context.update(flask_context)
+
     context.update(options['KONCH_CONTEXT'])
 
     def context_formatter(ctx):
@@ -50,10 +56,19 @@ def cli():
             FLASK=click.style('Flask:', bold=True),
             base_context=formatted_base
         )
+        if options['KONCH_FLASK_SHELL_CONTEXT']:
+            variables = ', '.join(sorted(flask_context.keys()))
+            ret += '\n{ADDITIONAL}\n{variables}\n'.format(
+                ADDITIONAL=click.style(
+                    'Flask shell context (see shell_context_processor()):',
+                    bold=True
+                ),
+                variables=variables
+            )
         if options['KONCH_CONTEXT']:
             variables = ', '.join(sorted(options['KONCH_CONTEXT'].keys()))
             ret += '\n{ADDITIONAL}\n{variables}'.format(
-                ADDITIONAL=click.style('Additional variables:', bold=True),
+                ADDITIONAL=click.style('Additional variables (see KONCH_CONTEXT):', bold=True),
                 variables=variables
             )
         return ret
