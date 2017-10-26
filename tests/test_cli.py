@@ -14,7 +14,17 @@ def make_app():
         app = Flask('testapp')
         app.config['KONCH_SHELL'] = 'py'
         app.config.update(config)
+
+        # Register shell context
+        def shell_context_processor():
+            return {
+                'shellctx': 'shellctx-value',
+                'shellctx_overriden_by_konch_context': 'not-overridden'
+            }
+        app.shell_context_processor(shell_context_processor)
+
         return app
+
     return maker
 
 @pytest.fixture(scope='session')
@@ -42,9 +52,32 @@ def test_no_flask_imports(run_command):
     assert 'Blueprint, Config, Flask,' not in result.output
 
 def test_additional_context(run_command):
-    result = run_command(config={'KONCH_CONTEXT': {'foo': 42, 'bar': 24}})
-    assert 'Additional variables:' in result.output
+    result = run_command(
+        config={
+            'KONCH_CONTEXT': {
+                'foo': 'foo-value',
+                'bar': 'bar-value'
+            }
+        },
+        input='bar'
+    )
+    assert 'Additional variables (see KONCH_CONTEXT):' in result.output
     assert 'bar, foo' in result.output
+    assert '>>> \'bar-value\'' in result.output
+
+def test_flask_shell_context_processors(run_command):
+    result = run_command(
+        config={
+            'KONCH_CONTEXT': {
+                'shellctx_overriden_by_konch_context': 'overridden-by-konch'
+            }
+        },
+        input='shellctx\nshellctx_overriden_by_konch_context'
+    )
+    # raise Exception(result.output)
+    assert 'Flask shell context (see shell_context_processor()):' in result.output
+    assert '>>> \'shellctx-value\'' in result.output
+    assert '>>> \'overridden-by-konch\'' in result.output
 
 def test_banner(run_command):
     result = run_command(config={'KONCH_BANNER': 'foobarbaz'})

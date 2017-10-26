@@ -80,7 +80,7 @@ def readme(ctx, browse=False):
 @task
 def publish(ctx, test=False):
     """Publish to the cheeseshop."""
-    clean()
+    clean(ctx)
     try:
         __import__('wheel')
     except ImportError:

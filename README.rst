@@ -56,6 +56,7 @@ Configuration options
 =====================
 
 - ``KONCH_FLASK_IMPORTS``: Whether to automatically import top-level Flask functions and classes. Defaults to ``True``.
+- ``KONCH_FLASK_SHELL_CONTEXT``: Whether to automatically import Flask shell context, as registered by `shell_context_processor(f) <http://flask.pocoo.org/docs/0.12/api/#flask.Flask.shell_context_processor>`_. Defaults to ``True``.
 - ``KONCH_CONTEXT``: Dictionary of additional variables to include in the shell context.
 - ``KONCH_SHELL``: May be ``'ipy'``, ``'bpy'``, ``'ptpy'``, ``'ptipy'``, ``'py'``, or ``'auto'`` (default).
 - ``KONCH_BANNER``: Custom banner.
