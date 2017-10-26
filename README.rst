@@ -67,6 +67,66 @@ Configuration options
 - ``KONCH_PTPY_VI_MODE``: Enable vi mode (must be using ``ptpython`` shell).
 
 
+Contributing
+============
+
+Linting via `invoke` and `flake8`:
+
+.. code-block:: bash
+
+   invoke lint
+
+Testing via `invoke` and `pytest`:
+
+.. code-block:: bash
+
+   # Run test suite once
+   invoke test
+
+   # Run only tests which failed at last run
+   invoke test --last-failing
+
+   # Run test suite on each file change
+   invoke test --watch
+
+This requires that the Python dependencies from
+`dev-requirements.txt </dev-requirements.txt>`_ are installed, possibly into an
+own environment (virtualenv).
+
+The `test` command also includes linting.
+
+Full example:
+
+.. code-block:: bash
+
+   # prepare Python environment
+   python3 -m venv ./venv
+   . ./venv/bin/activate 
+   pip install -U -r dev-requirements.txt
+   pip install -U .
+
+   # single unit test
+   invoke test
+   
+   # continuous unit tests while watching for file changes
+   pip install pytest-xdist
+   invoke test --watch
+
+   # leave Python environment
+   # note: does not remove ./venv folder
+   deactivate
+
+   
+To run tests on all supported Python versions, run
+
+.. code-block:: bash
+
+   tox
+
+`tox` installs Python dependencies into separate environments. On Fedora, `tox`
+can be installed globally via `dnf install tox`, which also installs all
+supported Python versions.
+
 
 Project Links
 =============
