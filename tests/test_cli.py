@@ -52,9 +52,18 @@ def test_no_flask_imports(run_command):
     assert 'Blueprint, Config, Flask,' not in result.output
 
 def test_additional_context(run_command):
-    result = run_command(config={'KONCH_CONTEXT': {'foo': 42, 'bar': 24}})
+    result = run_command(
+        config={
+            'KONCH_CONTEXT': {
+                'foo': 'foo-value',
+                'bar': 'bar-value'
+            }
+        },
+        input='bar'
+    )
     assert 'Additional variables (see KONCH_CONTEXT):' in result.output
     assert 'bar, foo' in result.output
+    assert '>>> \'bar-value\'' in result.output
 
 def test_flask_shell_context_processors(run_command):
     result = run_command(
