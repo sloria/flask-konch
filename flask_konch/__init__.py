@@ -8,7 +8,7 @@
     :copyright: (c) 2017 by Steven Loria
     :license: MIT, see LICENSE for more details.
 """
-__version__ = '1.2.0'
+__version__ = '1.2.0.post0'
 __author__ = 'Steven Loria'
 __license__ = 'MIT'
 
