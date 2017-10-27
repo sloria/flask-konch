@@ -44,7 +44,7 @@ setup(
     package_dir={'flask-konch': 'flask-konch'},
     include_package_data=True,
     install_requires=REQUIRES,
-    license=read("LICENSE"),
+    license='MIT',
     zip_safe=False,
     keywords='flask-konch',
     classifiers=[
