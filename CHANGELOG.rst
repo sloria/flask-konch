@@ -5,8 +5,8 @@ Changelog
 ******************
 
 * Add Flask shell context (added with
-  ``app.shell_context_processor()``) to the konch context (:issue:`1`).
-  Thanks :user:`sbhtw`.
+  ``app.shell_context_processor()``) to the konch context (`#1 <https://github.com/sloria/flask-konch/pull/1>`_)
+  Thanks `@sbhtw  <https://github.com/sbhtw>`_.
 
 
 1.1.0 (2016-06-12)

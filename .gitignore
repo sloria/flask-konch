@@ -42,6 +42,8 @@ output/*/index.html
 # Sphinx
 docs/_build
 README.html
+CHANGELOG.html
+CONTRIBUTING.html
 
 .konchrc
 *.ai
