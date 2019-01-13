@@ -2,7 +2,7 @@
 Flask-Konch
 ***********
 
-|pypi-package| |build-status|
+|pypi-package| |build-status| |black|
 
 .. image:: https://user-images.githubusercontent.com/2379650/32085344-61a939da-ba9c-11e7-84e2-39fbd9eadc9d.png
     :alt: Flask-Konch
@@ -44,12 +44,7 @@ To add additional variables to the shell context:
 .. code-block:: python
 
    app = Flask(__name__)
-   app.config.update({
-      'KONCH_CONTEXT': {
-         'db': database,
-         'User': User,
-      }
-   })
+   app.config.update({"KONCH_CONTEXT": {"db": database, "User": User}})
 
 
 Configuration options
@@ -65,25 +60,21 @@ Configuration options
 - ``KONCH_CONTEXT_FORMAT``: Format to display shell context. May be ``'full'``, ``'short'``, or a function that receives the context dictionary as input and returns a string.
 - ``KONCH_IPY_AUTORELOAD``: Whether to load and enable the IPython autoreload extension (must be using ``ipython`` shell).
 - ``KONCH_IPY_EXTENSIONS``: List of IPython extension names to load (must be using ``ipython`` shell).
+- ``KONCH_IPY_COLORS``: IPython color style.
+- ``KONCH_IPY_HIGHLIGHTING_STYLE``: IPython code highlighting style.
 - ``KONCH_PTPY_VI_MODE``: Enable vi mode (must be using ``ptpython`` shell).
-
-
-
-Project Links
-=============
-
-- PyPI: https://pypi.python.org/pypi/flask-konch
-- Issues: https://github.com/sloria/flask-konch/issues
 
 License
 =======
 
 MIT licensed. See the bundled `LICENSE <https://github.com/sloria/flask-konch/blob/master/LICENSE>`_ file for more details.
 
-
-.. |pypi-package| image:: https://badge.fury.io/py/flask-konch.svg
+.. |pypi-package| image:: https://badgen.net/pypi/v/flask-konch
     :target: http://badge.fury.io/py/flask-konch
-    :alt: Latest version
-.. |build-status| image:: https://travis-ci.org/sloria/flask-konch.svg
+    :alt: Latest PyPI version
+.. |build-status| image:: https://badgen.net/travis/sloria/flask-konch/master
     :target: https://travis-ci.org/sloria/flask-konch
     :alt: Travis-CI
+.. |black| image:: https://badgen.net/badge/code%20style/black/000
+    :target: https://github.com/ambv/black
+    :alt: Code style: Black

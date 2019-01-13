@@ -1,6 +1,6 @@
 from flask import Flask
 
-BANNER = '''
+BANNER = """
            ╓É^▄
            ╙▓▓▓
             ▄▓▓▓▀▓▓
@@ -30,19 +30,19 @@ BANNER = '''
                              ▀▀█▄▌▀█▓▀██▓▓▓▓▓▓▓▄▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓█
                                  . ╙²█████▓▓▓▓▀▀▀▀▀▀▀▀▓▓▓▓▓▓▓▓██▀▀▀▀▀
                                               .    .   .
-'''
+"""
+
 
 class User:
     pass
 
+
 db = {}
 
+
 class Config:
-    SERVER_NAME = 'hello.test'
-    KONCH_CONTEXT = {
-        'User': User,
-        'db': db,
-    }
+    SERVER_NAME = "hello.test"
+    KONCH_CONTEXT = {"User": User, "db": db}
     KONCH_BANNER = BANNER
 
 
@@ -50,6 +50,6 @@ app = Flask(__name__)
 app.config.from_object(Config)
 
 
-@app.route('/')
+@app.route("/")
 def index():
-    return 'Hello'
+    return "Hello"
