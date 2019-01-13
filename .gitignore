@@ -43,7 +43,6 @@ output/*/index.html
 docs/_build
 README.html
 CHANGELOG.html
-CONTRIBUTING.html
 
 .konchrc
 *.ai
