@@ -17,6 +17,8 @@ DEFAULTS = dict(
     KONCH_CONTEXT_FORMAT=None,
     KONCH_IPY_AUTORELOAD=False,
     KONCH_IPY_EXTENSIONS=None,
+    KONCH_IPY_COLORS=None,
+    KONCH_IPY_HIGHLIGHTING_STYLE=None,
     KONCH_PTPY_VI_MODE=False,
 )
 
@@ -80,5 +82,8 @@ def cli():
         output=options["KONCH_OUTPUT"],
         ptpy_vi_mode=options["KONCH_PTPY_VI_MODE"],
         context_format=context_format,
+        ipy_extensions=options["KONCH_IPY_EXTENSIONS"],
         ipy_autoreload=options["KONCH_IPY_AUTORELOAD"],
+        ipy_colors=options["KONCH_IPY_COLORS"],
+        ipy_highlighting_style=options["KONCH_IPY_HIGHLIGHTING_STYLE"],
     )

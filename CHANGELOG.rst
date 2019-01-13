@@ -4,6 +4,17 @@ Changelog
 2.0.0 (unreleased)
 ******************
 
+Features:
+
+* Add ``KONCH_IPY_COLORS`` and ``KONCH_IPY_HIGHLIGHTING_STYLE`` options.
+
+
+Bug fixes:
+
+* Respect ``KONCH_IPY_EXTENSIONS`` option.
+
+Other changes:
+
 * Drop support for Python 3.4. Python 2.7 and >=3.5 are supported.
 
 1.2.0 (2017-10-26)

@@ -60,6 +60,8 @@ Configuration options
 - ``KONCH_CONTEXT_FORMAT``: Format to display shell context. May be ``'full'``, ``'short'``, or a function that receives the context dictionary as input and returns a string.
 - ``KONCH_IPY_AUTORELOAD``: Whether to load and enable the IPython autoreload extension (must be using ``ipython`` shell).
 - ``KONCH_IPY_EXTENSIONS``: List of IPython extension names to load (must be using ``ipython`` shell).
+- ``KONCH_IPY_COLORS``: IPython color style.
+- ``KONCH_IPY_HIGHLIGHTING_STYLE``: IPython code highlighting style.
 - ``KONCH_PTPY_VI_MODE``: Enable vi mode (must be using ``ptpython`` shell).
 
 License
