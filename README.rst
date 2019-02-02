@@ -70,7 +70,7 @@ License
 MIT licensed. See the bundled `LICENSE <https://github.com/sloria/flask-konch/blob/master/LICENSE>`_ file for more details.
 
 .. |pypi-package| image:: https://badgen.net/pypi/v/flask-konch
-    :target: http://badge.fury.io/py/flask-konch
+    :target: https://pypi.org/project/flask-konch/
     :alt: Latest PyPI version
 .. |build-status| image:: https://badgen.net/travis/sloria/flask-konch/master
     :target: https://travis-ci.org/sloria/flask-konch
