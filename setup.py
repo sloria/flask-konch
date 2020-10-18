@@ -8,7 +8,7 @@ EXTRAS_REQUIRE = {
     "tests": ["pytest"],
     "lint": [
         "flake8==3.6.0",
-        'flake8-bugbear==18.8.0; python_version >= "3.5"',
+        'flake8-bugbear==18.8.0',
         "pre-commit==1.14.0",
     ],
 }
@@ -58,12 +58,11 @@ setup(
         "Environment :: Web Environment",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Topic :: System :: Shells",
     ],
     test_suite="tests",
