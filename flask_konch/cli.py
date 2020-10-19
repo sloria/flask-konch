@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Entry point for the ``konch`` Flask CLI commmand."""
 from flask.cli import with_appcontext
 import click
