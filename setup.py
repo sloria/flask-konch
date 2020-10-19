@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import re
 from setuptools import setup, find_packages
 
@@ -20,7 +19,7 @@ def find_version(fname):
     Raises RuntimeError if not found.
     """
     version = ""
-    with open(fname, "r") as fp:
+    with open(fname) as fp:
         reg = re.compile(r'__version__ = [\'"]([^\'"]*)[\'"]')
         for line in fp:
             m = reg.match(line)
