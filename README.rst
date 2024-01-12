@@ -72,9 +72,9 @@ MIT licensed. See the bundled `LICENSE <https://github.com/sloria/flask-konch/bl
 .. |pypi-package| image:: https://badgen.net/pypi/v/flask-konch
     :target: https://pypi.org/project/flask-konch/
     :alt: Latest PyPI version
-.. |build-status| image:: https://badgen.net/travis/sloria/flask-konch/master
-    :target: https://travis-ci.org/sloria/flask-konch
-    :alt: Travis-CI
+.. |build-status| image:: https://github.com/sloria/flask-konch/actions/workflows/build-release.yml/badge.svg
+    :target: https://github.com/sloria/flask-konch/actions/workflows/build-release.yml
+    :alt: Build status
 .. |black| image:: https://badgen.net/badge/code%20style/black/000
     :target: https://github.com/ambv/black
     :alt: Code style: Black
