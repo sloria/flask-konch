@@ -33,9 +33,7 @@ def get_flask_imports():
 @with_appcontext
 def cli():
     """An improved shell command, based on konch."""
-    from flask.globals import _app_ctx_stack
-
-    app = _app_ctx_stack.top.app
+    app = flask.current_app
     options = {key: app.config.get(key, DEFAULTS[key]) for key in DEFAULTS.keys()}
     base_context = {"app": app}
     if options["KONCH_FLASK_IMPORTS"]:
