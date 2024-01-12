@@ -4,8 +4,7 @@ Changelog
 3.0.0 (unreleased)
 ******************
 
-* Drop support for Python 2.7 and 3.5.
-* Test against Python 3.8 and 3.9.
+* Support Python 3.8-3.12, Flask>=2.2.5, and konch>=4. Older versions are no longer supported.
 
 2.0.0 (2019-01-13)
 ******************

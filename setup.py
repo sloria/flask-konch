@@ -2,16 +2,17 @@ import re
 from setuptools import setup, find_packages
 
 
-INSTALL_REQUIRES = ["Flask>=0.11", "konch>=2.0.0"]
+INSTALL_REQUIRES = ["flask>=2.2.5", "konch>=4"]
 EXTRAS_REQUIRE = {
     "tests": ["pytest"],
     "lint": [
-        "flake8==3.8.4",
-        "flake8-bugbear==20.1.4",
-        "pre-commit~=2.7",
+        "flake8==7.0.0",
+        "flake8-bugbear==23.12.2",
+        "pre-commit~=3.6",
     ],
 }
 EXTRAS_REQUIRE["dev"] = EXTRAS_REQUIRE["tests"] + EXTRAS_REQUIRE["lint"] + ["tox"]
+PYTHON_REQUIRES = ">=3.8"
 
 
 def find_version(fname):
@@ -50,6 +51,7 @@ setup(
     include_package_data=True,
     install_requires=INSTALL_REQUIRES,
     extras_require=EXTRAS_REQUIRE,
+    python_requires=PYTHON_REQUIRES,
     license="MIT",
     zip_safe=False,
     keywords="flask-konch",
@@ -58,10 +60,11 @@ setup(
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
         "Topic :: System :: Shells",
     ],
     test_suite="tests",
