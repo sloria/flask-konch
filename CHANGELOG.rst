@@ -4,7 +4,7 @@ Changelog
 3.0.0 (unreleased)
 ******************
 
-* Support Python 3.8-3.12, Flask>=2, and konch>=4. Older versions are no longer supported.
+* Support Python 3.8-3.12, Flask>=2.2.5, and konch>=4. Older versions are no longer supported.
 
 2.0.0 (2019-01-13)
 ******************

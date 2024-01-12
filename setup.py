@@ -2,7 +2,7 @@ import re
 from setuptools import setup, find_packages
 
 
-INSTALL_REQUIRES = ["Flask>=2", "konch>=4"]
+INSTALL_REQUIRES = ["flask>=2.2.5", "konch>=4"]
 EXTRAS_REQUIRE = {
     "tests": ["pytest"],
     "lint": [
