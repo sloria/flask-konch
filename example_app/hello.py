@@ -1,3 +1,5 @@
+import typing
+
 from flask import Flask
 
 BANNER = """
@@ -37,7 +39,7 @@ class User:
     pass
 
 
-db = {}
+db: dict[str, typing.Any] = {}
 
 
 class Config:

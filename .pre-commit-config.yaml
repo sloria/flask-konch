@@ -17,7 +17,6 @@ repos:
   rev: v1.8.0
   hooks:
   - id: mypy
-    exclude: example_rcfiles/
 - repo: https://github.com/adamchainz/blacken-docs
   rev: 1.16.0
   hooks:
