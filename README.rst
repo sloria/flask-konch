@@ -4,8 +4,8 @@ Flask-Konch
 
 |pypi-package| |build-status| |black|
 
-.. image:: https://user-images.githubusercontent.com/2379650/32085344-61a939da-ba9c-11e7-84e2-39fbd9eadc9d.png
-    :alt: Flask-Konch
+.. image:: https://github.com/sloria/flask-konch/assets/2379650/9f6b0518-50d3-422f-af63-17c61f7eb7d8
+    :alt: Flask-Konch screenshot
 
 An improved shell command for Flask
 ===================================
