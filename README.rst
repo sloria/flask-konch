@@ -2,7 +2,7 @@
 Flask-Konch
 ***********
 
-|pypi-package| |build-status| |black|
+|pypi-package| |build-status|
 
 .. image:: https://github.com/sloria/flask-konch/assets/2379650/9f6b0518-50d3-422f-af63-17c61f7eb7d8
     :alt: Flask-Konch screenshot
@@ -75,6 +75,3 @@ MIT licensed. See the bundled `LICENSE <https://github.com/sloria/flask-konch/bl
 .. |build-status| image:: https://github.com/sloria/flask-konch/actions/workflows/build-release.yml/badge.svg
     :target: https://github.com/sloria/flask-konch/actions/workflows/build-release.yml
     :alt: Build status
-.. |black| image:: https://badgen.net/badge/code%20style/black/000
-    :target: https://github.com/ambv/black
-    :alt: Code style: Black

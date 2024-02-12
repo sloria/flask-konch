@@ -1,6 +1,11 @@
 Changelog
 =========
 
+4.0.0 (unreleased)
+******************
+
+* Remove ``__version__`` variable. Use ``importlib.metadata.version("flask-konch")`` instead.
+
 3.0.0 (2024-01-12)
 ******************
 

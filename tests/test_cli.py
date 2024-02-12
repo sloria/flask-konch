@@ -1,8 +1,7 @@
 import pytest
+from click.testing import CliRunner
 from flask import Flask
 from flask.cli import ScriptInfo
-from click.testing import CliRunner
-
 from flask_konch.cli import cli
 
 ##### Fixtures #####

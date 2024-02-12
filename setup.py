@@ -1,6 +1,6 @@
 import re
-from setuptools import setup, find_packages
 
+from setuptools import find_packages, setup
 
 INSTALL_REQUIRES = ["flask>=2.2.5", "konch>=4"]
 EXTRAS_REQUIRE = {
