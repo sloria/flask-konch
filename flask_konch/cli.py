@@ -1,10 +1,9 @@
 """Entry point for the ``konch`` Flask CLI commmand."""
 
-from flask.cli import with_appcontext
 import click
 import flask
 import konch
-
+from flask.cli import with_appcontext
 
 DEFAULTS = dict(
     KONCH_FLASK_IMPORTS=True,
