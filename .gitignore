@@ -1,5 +1,9 @@
 *.py[cod]
 
+# virtualenv
+.venv/
+venv/
+
 # C extensions
 *.so
 
@@ -18,14 +22,16 @@ develop-eggs
 lib
 lib64
 
-# Installer logs
+# pip
 pip-log.txt
+pip-wheel-metadata
 
 # Unit test / coverage reports
-.cache
 .coverage
 .tox
 nosetests.xml
+test-output/
+.pytest_cache
 
 # Translations
 *.mo
@@ -42,10 +48,15 @@ output/*/index.html
 # Sphinx
 docs/_build
 README.html
-CHANGELOG.html
 
+# mypy
+
+.mypy_cache
+
+!tests/.env
+
+# ruff
+.ruff_cache
+
+# konch
 .konchrc
-*.ai
-
-*.ipynb
-.ipynb_checkpoints

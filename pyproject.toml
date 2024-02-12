@@ -1,3 +1,66 @@
-[tool.black]
-line-length = 88
-target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+[project]
+name = "flask-konch"
+version = "3.0.0"
+description = "An improved shell command for the Flask CLI"
+readme = "README.rst"
+license = { file = "LICENSE" }
+authors = [{ name = "Steven Loria", email = "sloria1@gmail.com" }]
+classifiers = [
+  "Environment :: Web Environment",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: System :: Shells",
+]
+requires-python = ">=3.8"
+dependencies = ["flask>=2.2.5", "konch>=4"]
+
+[project.urls]
+Changelog = "https://github.com/sloria/flask-konch/blob/master/CHANGELOG.rst"
+Issues = "https://github.com/sloria/flask-konch/issues"
+Source = "https://github.com/sloria/flask-konch"
+
+[project.optional-dependencies]
+tests = ["pytest"]
+dev = ["flask-konch[tests]", "tox", "pre-commit~=3.6"]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.sdist]
+include = ["tests/", "CHANGELOG.rst", "CONTRIBUTING.md", "tox.ini"]
+
+[tool.ruff]
+src = ["src"]
+fix = true
+show-fixes = true
+show-source = true
+
+[tool.ruff.lint]
+select = [
+  "B",  # flake8-bugbear
+  "E",  # pycodestyle error
+  "F",  # pyflakes
+  "I",  # isort
+  "UP", # pyupgrade
+  "W",  # pycodestyle warning
+]
+
+[tool.ruff.per-file-ignores]
+"tests/*" = ["E721"]
+
+[tool.ruff.lint.pycodestyle]
+ignore-overlong-task-comments = true
+
+[tool.mypy]
+ignore_missing_imports = true
+warn_unreachable = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+no_implicit_optional = true
