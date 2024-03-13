@@ -1,8 +1,8 @@
 """
-    flask_konch
-    ~~~~~~~~~~~
+flask_konch
+~~~~~~~~~~~
 
-    An improved shell commmand for the Flask CLI.
+An improved shell commmand for the Flask CLI.
 """
 
 __all__ = ["EXTENSION_NAME"]
