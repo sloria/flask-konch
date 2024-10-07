@@ -30,7 +30,7 @@ Source = "https://github.com/sloria/flask-konch"
 
 [project.optional-dependencies]
 tests = ["pytest"]
-dev = ["flask-konch[tests]", "tox", "pre-commit~=3.6"]
+dev = ["flask-konch[tests]", "tox", "pre-commit>=3.6,<5.0"]
 
 [build-system]
 requires = ["flit_core<4"]
